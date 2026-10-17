@@ -1,0 +1,15 @@
+# Ignore the Python virtual environment (contains thousands of local package dependencies)
+.venv/
+venv/
+
+# Ignore PyCharm IDE configuration files (personal window layouts, indexes, etc.)
+.idea/
+
+# Ignore Python runtime cache files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+
+# Ignore Jupyter Notebook checkpoint states (autosave fragments)
+.ipynb_checkpoints/

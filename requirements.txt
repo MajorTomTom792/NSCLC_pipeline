@@ -1,0 +1,54 @@
+altgraph==0.17.5
+anndata==0.13.4
+annotated-types==0.8.0
+array-api-compat==1.15.0
+cloudpickle==3.1.2
+contourpy==1.4.0
+cutadapt==5.2
+cycler==0.12.1
+dnaio==1.2.4
+donfig==0.8.1.post1
+fonttools==4.67.0
+formulaic==1.2.2
+formulaic-contrasts==1.0.0
+google-crc32c==1.9.0
+h5py==3.16.0
+interface_meta==2.0.1
+joblib==1.6.0
+kiwisolver==1.5.1
+legacy-api-wrap==1.5
+macholib==1.16.4
+matplotlib==3.11.2
+msgspec==0.22.0
+narwhals==2.27.1
+natsort==8.4.0
+numcodecs==0.17.0
+numpy @ file:///Users/runner/miniforge3/conda-bld/bld/rattler-build_numpy_1791675323/work/dist/numpy-2.5.4-cp314-cp314-macosx_11_0_arm64.whl#sha256=61292fa27059c97d93a8d2fab820011071776cf82d59c4a8b26b268e97872661
+packaging==26.3
+pandas @ file:///Users/runner/miniforge3/conda-bld/bld/rattler-build_pandas_1789803428/work
+pillow==12.3.0
+pydantic==2.14.1
+pydantic-settings==2.16.0
+pydantic_core==2.50.1
+pydeseq2==0.5.4
+pyinstaller==6.22.3
+pyinstaller-hooks-contrib==2026.8
+pyparsing==3.3.3
+pysam==0.24.1
+python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_python-dateutil_1751104122/work
+python-dotenv==1.2.4
+PyYAML==6.0.3
+scikit-learn==1.9.1
+scipy==1.18.1
+scverse-misc==0.1.7
+session-info2==0.4.2
+session_info==1.0.1
+setuptools==84.0.0
+six @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_six_1753199211/work
+stdlib-list==0.12.0
+threadpoolctl==3.7.0
+typing-inspection==0.4.4
+typing_extensions==4.16.0
+wrapt==2.5.1
+xopen==2.1.0
+zarr==3.4.1

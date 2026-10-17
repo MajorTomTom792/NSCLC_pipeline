@@ -1,0 +1,17 @@
+
+name: NSCLC_pipeline
+channels:
+- bioconda
+- conda-forge
+dependencies:
+- pip
+- numpy
+- pandas
+- fastqc
+- bowtie
+- pysam
+- pip:
+    - pydeseq2
+    - cutadapt
+
+
