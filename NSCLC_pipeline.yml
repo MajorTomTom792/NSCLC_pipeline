@@ -1,4 +1,3 @@
-
 name: NSCLC_pipeline
 channels:
 - bioconda

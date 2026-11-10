@@ -1,0 +1,80 @@
+Assuming unrestricted shared filesystem usage.
+
+SNAKEMAKE
+=========
+  Date: 2026-11-01 18:47:38
+  Workflow ID: e420e2f2-7fd7-4bd3-b509-997022499aa4
+  Platform: macOS-15.7.5-arm64-arm-64bit-Mach-O
+  Host: mbair142414
+  User: tyu28
+  Snakemake version: 9.27.0
+  Python version: 3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:04:32) [Clang 20.1.8 ]
+  Command: /Users/tyu28/.pixi/envs/snakemake/bin/snakemake --cores 1 -s ./hello_world.smk
+  Snakefile: /Users/tyu28/PycharmProjects/NSCLC_pipeline_script/hello_world.smk
+  Base directory: /Users/tyu28/PycharmProjects/NSCLC_pipeline_script
+  Run directory: /Users/tyu28/PycharmProjects/NSCLC_pipeline_script
+  Working directory: /Users/tyu28/PycharmProjects/NSCLC_pipeline_script
+  Config file(s): []
+  Config MD5: 99914b932bd37a50b983c5e7c90ae93b
+
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+helloworld        1
+split             1
+toupper           1
+all               1
+total             4
+
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Nov  1 18:47:40 2026]
+localrule helloworld:
+    output: hello-world.tmp
+    jobid: 3
+    reason: Missing output files: hello-world.tmp
+    resources: tmpdir=/var/folders/r6/9ykt388n435338l4zd_jqwhn0s7tb8/T
+[Sun Nov  1 18:47:40 2026]
+Finished jobid: 3 (Rule: helloworld)
+1 of 4 steps (25%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Nov  1 18:47:40 2026]
+localrule split:
+    input: hello-world.tmp
+    output: chunk_ab, chunk_ac, chunk_ad, chunk_ae, chunk_af, chunk_ag, chunk_ah
+    jobid: 2
+    reason: Missing output files: chunk_ag, chunk_af, chunk_ad, chunk_ab, chunk_ac, chunk_ah, chunk_ae; Input files updated by another job: hello-world.tmp
+    resources: tmpdir=/var/folders/r6/9ykt388n435338l4zd_jqwhn0s7tb8/T
+[Sun Nov  1 18:47:40 2026]
+Finished jobid: 2 (Rule: split)
+2 of 4 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Nov  1 18:47:40 2026]
+localrule toupper:
+    input: chunk_ab, chunk_ac, chunk_ad, chunk_ae, chunk_af, chunk_ag, chunk_ah
+    output: hello-world.txt
+    jobid: 1
+    reason: Missing output files: hello-world.txt; Input files updated by another job: chunk_ag, chunk_ae, chunk_af, chunk_ah, chunk_ad, chunk_ab, chunk_ac
+    resources: tmpdir=/var/folders/r6/9ykt388n435338l4zd_jqwhn0s7tb8/T
+[Sun Nov  1 18:47:40 2026]
+Finished jobid: 1 (Rule: toupper)
+3 of 4 steps (75%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Nov  1 18:47:40 2026]
+localrule all:
+    input: hello-world.txt
+    jobid: 0
+    reason: Input files updated by another job: hello-world.txt
+    resources: tmpdir=/var/folders/r6/9ykt388n435338l4zd_jqwhn0s7tb8/T
+[Sun Nov  1 18:47:40 2026]
+Finished jobid: 0 (Rule: all)
+4 of 4 steps (100%) done
+Complete log(s): /Users/tyu28/PycharmProjects/NSCLC_pipeline_script/.snakemake/log/2026-11-01T184738.639093.snakemake.log
+Elapsed time: 0:00:01.496365
