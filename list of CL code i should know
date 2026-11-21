@@ -1,0 +1,33 @@
+list of CL code i should know
+1. cd to move up in general
+cd 'subdirectory' to move down
+
+2. ls is to list a directory
+-l is for size
+-a is for hidden files (roots)
+
+3. pwd, print current directory
+
+4. mkdir, create a subdirectory in current directory
+
+5. rmdir is to remove empty directories
+
+6. rm -rf deletes things, even non empty
+
+*7. mv is moving directories/files to a new place
+mv ~directory1path ~directory2path
+
+8. cp creates a copy of a directory
+cp ~path1 ~path2
+
+9. cat concatenate, can print content or print out several
+cat file1 file2
+
+*10. less is to read a file, with 
+less file1
+
+*11. find is to find a path of directory/file
+find . -type f or d -iname name 
+
+12. grep is to search a term in a file
+zgrep or grep

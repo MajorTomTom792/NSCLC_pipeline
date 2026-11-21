@@ -1,0 +1,7 @@
+config.yml
+
+Name: 'NSCLC_master_yml'
+
+samples: #write file, possibly CSV, like the one in the google sheets
+
+
