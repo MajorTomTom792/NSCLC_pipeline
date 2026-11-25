@@ -1,7 +1,78 @@
-config.yml
-
 Name: 'NSCLC_master_yml'
 
-samples: #write file, possibly CSV, like the one in the google sheets
+samples_tsv: 'path/to/samples.tsv'
+
+reference:
+  hairpin: 'references/Archives/hairpin.fa'
+  hsa_fasta: 'references/Archives/mature.fa'
+  hsa_gff: 'references/GFF/hsa.gff3'
 
 
+#might not need fastqc
+fastqc_params:
+  - '--outdir'
+  - 'path/to/fastqc_output'
+  - '--threads'
+  - '4'
+#might not need multiqc
+multiqc_params:
+  - '--outdir'
+  - 'path/to/multiqc_output'
+
+#write file, possibly tsv/CSV, like the one in the google sheets
+cutadapt_params:
+  - '-a'
+  - 'AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'
+  - '-A'
+  - 'AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT'
+  - '-o'
+  - 'path/to/trimmed_output_R1.fastq.gz'
+  - '-p'
+  - 'path/to/trimmed_output_R2.fastq.gz'
+  - '--minimum-length'
+  - '18'
+  - '--maximum-length'
+  - '30'
+
+bowtie1_params:
+  - '-S'
+  - 'path/to/bowtie1_output.sam'
+  - '-p'
+  - '4'
+  - '--best'
+  - '--strata'
+  - '--norc'
+  - '--al'
+  - 'path/to/aligned_output.fastq'
+  - '--un'
+  - 'path/to/unaligned_output.fastq'
+
+HTSeq_params:
+  - '-f'
+  - 'path/to/bowtie1_output.sam'
+  - '-t'
+  - 'path/to/htseq_output.txt'
+
+PyDESeq_params:
+  - '--input'
+  - 'path/to/htseq_output.txt'
+  - '--output'
+  - 'path/to/pyDESeq_output.txt'
+
+isomiRmap_params:
+  - '--input'
+  - 'path/to/htseq_output.txt'
+  - '--output'
+  - 'path/to/isomiRmap_output.txt'
+
+miRge3.0_params:
+  - '--input'
+  - 'path/to/htseq_output.txt'
+  - '--output'
+  - 'path/to/miRge3.0_output.txt'
+
+miRTop_params:
+  - '--input'
+  - 'path/to/htseq_output.txt'
+  - '--output'
+  - 'path/to/miRTop_output.txt'
